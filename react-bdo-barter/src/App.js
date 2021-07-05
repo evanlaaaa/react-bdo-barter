@@ -114,12 +114,11 @@ function App() {
       }
     }
 
-    localStorage.setItem('t4stock', JSON.stringify(temp));
+    localStorage.setItem('stock', JSON.stringify(temp));
 
-    setT4Stock(temp);
-    setT4Check([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
     setHakovenTrade(0);
     setMargoTrade(0);
+    setT4Stock(temp);
   }
 
   const onParleyChange = e => {
