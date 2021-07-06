@@ -84,7 +84,7 @@ function App() {
     }
 
     let total = 1000000 
-    - (hakovenTrade >= hakovenThreshold ? (43780-(43780*parley/100))+((29430-(29430*parley/100))*2)+(36420-(36420*parley/100)) : 0) 
+    - (parseInt(hakovenTrade) >= parseInt(hakovenThreshold) ? (43780-(43780*parley/100))+((29430-(29430*parley/100))*2)+(36420-(36420*parley/100)) : 0) 
     - (1250 * margoThreshold / 100 <= margoTrade ? ((46544-(46544*parley/100))*3)+((58180-(58180*parley/100))*4) : 0) 
     - (counts * (14286-(14286*parley/100)) * 4)
     - (t4rcount * (14286-(14286*parley/100)) * 6);
