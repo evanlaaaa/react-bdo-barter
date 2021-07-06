@@ -146,8 +146,13 @@ function App() {
   }
 
   return (
-    <div className="App d-flex">
-      <div className="p-3 col-5 bg-light text-start d-block">
+    <div className="App container d-flex flex-wrap">
+      <div className="row col-12 px-3 me-0">
+        <div className="title py-3 text-light" style={{fontSize: '18px'}}>
+          BDO Barter t4 stock & parley management 
+        </div>
+      </div>
+      <div className="p-3 col-md-9 col-sm-12 bg-light text-start d-block">
         <div className="row">
           <div className="col-auto align-self-center">
             <label>Enter parley discount %:</label>
@@ -196,7 +201,7 @@ function App() {
         <div>
           {
             t4s.map((v, i) => 
-              <div className="form-check form-check-inline">
+              <div className="form-check form-check-inline border p-3">
                 <input className="form-check-input" type="checkbox" onChange={(e) => onT4Check(i)} />
                 <img src={process.env.PUBLIC_URL + '/' + v + '.png'} />
               </div>
@@ -269,23 +274,27 @@ function App() {
             </div>
           </>
         }
+        <button className='btn btn-primary' onClick={onStockSync}>Set to stock</button>
       </div>
-      <div className="col-3 p-3">
-        <div className="row">
+      <div className="col-md-3 col-sm-12 p-3">
+        <div className="row me-0">
           <p className='pt-3 fw-bold' style={{fontSize: '24px'}}>T4s stocks</p>
           <div>
             {t4Stock &&
               t4s.map((v, i) => 
-                <div className="form-inline">
-                  <input onChange={(e) => onT4Check(i)} value={t4Stock[i]} onChange={(e) => onStockChange(e, i)}/>
-                  <img src={process.env.PUBLIC_URL + '/' + v + '.png'} />
+                <div className="row">
+                  <div className="col">
+                    <input className='form-control' onChange={(e) => onT4Check(i)} value={t4Stock[i]} onChange={(e) => onStockChange(e, i)}/>
+                  </div>
+                  <div className="col-auto">
+                    <img src={process.env.PUBLIC_URL + '/' + v + '.png'} />
+                  </div>
                 </div>
               )
             }
           </div>
         </div>
       </div>
-      <button onClick={onStockSync}>Set to stock</button>
     </div>
   );
 }
