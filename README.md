@@ -5,4 +5,4 @@ Built using [React](https://reactjs.org/) and [Bootstrap](https://getbootstrap.c
 
 Hosted using gh-pages https://evanlaaaa.github.io/portfolio/barter
 
-This repository has been deprecated and migrated to my [Portfolio repository](https://github.com/evanlaaaa/portfolio).
+This repository has been deprecated and migrated to my [Portfolio repository](https://github.com/evanlaaaa/portfolio/blob/main/pages/barter.tsx).
