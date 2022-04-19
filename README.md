@@ -1,5 +1,6 @@
 # react-bdo-barter
 
-Black Desert Online barter parley calculator / stock management
+#### A Black Desert Online barter parley calculator / stock management web application
+Built using [React](https://reactjs.org/) and [Bootstrap](https://getbootstrap.com/)
 
-Hosted with github: https://evanlaaaa.github.io/react-bdo-barter/
+This repository has been deprecated and migrated to my [Portfolio repository](https://github.com/evanlaaaa/portfolio).
